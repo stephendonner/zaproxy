@@ -320,7 +320,7 @@ def main(argv):
                 '-config', 'api.addrs.addr.regex=true',
                 '-config', 'spider.maxDuration=' + str(mins),
                 '-addonupdate',
-                '-addoninstall', 'pscanrulesBeta'	# In case we're running in the stable container
+                '-addoninstall', 'pscanrulesBeta',	# In case we're running in the stable container
                 '-addoninstall', 'openapi']  # Pull in the Swagger/OpenAPI add-on
 
       if (zap_alpha):
@@ -366,7 +366,7 @@ def main(argv):
                 '-config', 'api.addrs.addr.name=.*',
                 '-config', 'api.addrs.addr.regex=true',
                 '-config', 'spider.maxDuration=' + str(mins),
-                '-addonupdate'
+                '-addonupdate',
                 '-addoninstall', 'openapi']) # Pull in the Swagger/OpenAPI add-on
 
       if (zap_alpha):
