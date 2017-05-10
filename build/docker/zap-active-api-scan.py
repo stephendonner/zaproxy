@@ -95,7 +95,7 @@ def usage():
     print ('    -n context_file   context file which will be loaded prior to spidering the target')
     print ('    -p progress_file  progress file which specifies issues that are being addressed')
     print ('    -s                short output format - dont show PASSes or example URLs')
-    print ('    --active-scan     perform an active scan')
+    print ('    --active_scan     perform an active scan')
     print ('    -z zap_options    ZAP command line options e.g. -z "-config aaa=bbb -config ccc=ddd"')
     print ('')
     print ('For more details see https://github.com/zaproxy/zaproxy/wiki/ZAP-Baseline-Scan')
@@ -412,7 +412,7 @@ def main(argv):
 
     logging.debug ('Try to import an OpenAPI definition')
     zap._request(zap.base + 'openapi/action/importUrl/',{'url': 'https://kinto.dev.mozaws.net/v1/__api__'})
-    time.sleep(5)
+    time.sleep(10)
 
     # Access the target
     res = zap.urlopen(target)
