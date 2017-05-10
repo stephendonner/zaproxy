@@ -406,6 +406,7 @@ def main(argv):
       if res.startswith("ZAP Error"):
         logging.error ('Failed to load context file ' + context_file + ' : ' + res)
 
+    logging.debug ('Try to import an OpenAPI definition')
     zap._request(zap.base + 'openapi/action/importUrl/',{'url': 'https://kinto.dev.mozaws.net/v1/__api__'})
     time.sleep(5)
 
