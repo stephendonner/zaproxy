@@ -456,6 +456,7 @@ def main(argv):
       logging.debug ('Records to passive scan : ' + zap.pscan.records_to_scan)
       time.sleep(2)
     logging.debug ('Passive scanning complete')
+    logging.debug (zap.core.urls)
 
     if active_scan:
         logging.debug ('Starting active scan for %s' % target)
