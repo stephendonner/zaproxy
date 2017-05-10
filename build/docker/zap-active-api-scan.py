@@ -394,6 +394,10 @@ def main(argv):
     zap = ZAPv2(proxies={'http': 'http://' + zap_ip + ':' + str(port), 'https': 'http://' + zap_ip + ':' + str(port)})
     for x in range(0, timeout):
       try:
+        addons = json.dumps(zap.autoupdate.installed_addons)
+        addons_json = json.loads(addons)
+        addons_list = [str(addon['name']) for addon in addons_json]
+        loggin.debug (addons_list)
         logging.debug ('ZAP Version ' + zap.core.version)
         logging.debug ('Took ' + str(x) + ' seconds')
         break
