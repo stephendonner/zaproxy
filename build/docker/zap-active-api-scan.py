@@ -397,7 +397,7 @@ def main(argv):
         addons = json.dumps(zap.autoupdate.installed_addons)
         addons_json = json.loads(addons)
         addons_list = [str(addon['name']) for addon in addons_json]
-        loggin.debug (addons_list)
+        logging.debug (addons_list)
         logging.debug ('ZAP Version ' + zap.core.version)
         logging.debug ('Took ' + str(x) + ' seconds')
         break
