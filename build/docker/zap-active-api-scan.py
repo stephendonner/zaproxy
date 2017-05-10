@@ -358,7 +358,7 @@ def main(argv):
       params.extend([
                 '-u', 'zap',
                 '-p', str(port) + ':' + str(port),
-                '-d', 'owasp/zap2docker-weekly',
+                '-d', 'stephendonner/zaproxy',
                 'zap-x.sh', '-daemon',
                 '-port', str(port),
                 '-host', '0.0.0.0',
